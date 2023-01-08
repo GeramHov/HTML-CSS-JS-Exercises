@@ -1,0 +1,45 @@
+/* EX 1 */
+
+#case {
+    width: 75%;
+}
+
+.ex1 {
+    height: 150px;
+    border-style: dotted;
+    background-color:bisque;
+    border-radius: 3%;
+}
+
+.newcase {
+    width: 200px;
+    height: 200px;
+    border-radius: 3%;
+    background-color:white;
+}
+
+p.arm {
+    font-size: x-small;
+}
+
+p.cons {
+    color: blueviolet;
+}
+
+.ex3 {
+    border: solid 2px black;
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+}
+
+.ex3:hover {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+    border: solid 2px red;
+}
