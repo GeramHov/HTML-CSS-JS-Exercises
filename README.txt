@@ -39,8 +39,8 @@ case deviennent 400px de large pour 200 px de haut.
 �� Bonus : �� Carrousel
 ● ::Créez un bouton
 ● ::Au clic du bouton une image apparaît
-● Quand je clic à droite de l&#39;image, une autre image apparaît
-○ bonus : faire un effet de transition
-● Si je clic à droite de l&#39;image une troisième apparaît, si je clic à
+● ::Quand je clic à droite de l&#39;image, une autre image apparaît
+○ bonus :: faire un effet de transition
+● ::Si je clic à droite de l&#39;image une troisième apparaît, si je clic à
 gauche la précédente apparaît
-● ⚠️ interdiction d&#39;utiliser les carrousels des frameworks css !
+● ⚠️ ::interdiction d&#39;utiliser les carrousels des frameworks css !

@@ -1,9 +1,13 @@
 /* EX 1 */
 
+/*Setting a body cover photo (comment lines 5-8 when You need to set background image on grey according to EX 2.5 2.6 in JS file)*/
+
 body {
   background-image: url(./bg-image.jpg);
   background-size: cover;
 }
+
+/*Setting font family Inconsolata*/
 
 h1 {
   font-family: "Inconsolata", monospace;
@@ -11,13 +15,19 @@ h1 {
   font-weight: 400;
 }
 
+/*Setting a separator line to every needed section*/
+
 hr.solid {
   border-top: 1px solid black;
 }
 
+/*Setting style of nine columns container (EX 1)*/
+
 #ninecols {
   width: 1000px;
 }
+
+/*Setting font family for paragraphs*/
 
 p {
   font-family: "Inconsolata", monospace;
@@ -25,9 +35,13 @@ p {
   font-weight: 200;
 }
 
+/*Setting all 9 columns container in columns width*/
+
 #case {
   width: 75%;
 }
+
+/*Setting 9 columns style*/
 
 .ex1 {
   height: 150px;
@@ -36,6 +50,8 @@ p {
   border-radius: 3%;
 }
 
+/*Setting hidden/onclick column style*/
+
 .newcase {
   width: 200px;
   height: 200px;
@@ -43,9 +59,13 @@ p {
   background-color: white;
 }
 
+/*Setting column integrated text fontsize*/
+
 p.arm {
   font-size: x-small;
 }
+
+/*Setting blurred style for EX 2 columns*/
 
 .ex3 {
   border: solid 2px black;
@@ -56,6 +76,8 @@ p.arm {
   filter: blur(6px);
 }
 
+/*Setting hovering features*/
+
 .ex3:hover {
   -webkit-filter: blur(0px);
   -moz-filter: blur(0px);
@@ -63,4 +85,46 @@ p.arm {
   -ms-filter: blur(0px);
   filter: blur(0px);
   border: solid 2px red;
+}
+
+/*Setting left button properties (+hover function)*/
+
+#leftbutton {
+  opacity: 0.4;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+#leftbutton:hover {
+  transform: rotate(0deg) scale(1.1);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+/*Setting right button properties (+hover function)*/
+
+#rightbutton {
+  opacity: 0.4;
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+
+#rightbutton:hover {
+  transform: rotate(180deg) scale(1.1);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+
+}
+
+/*Setting slideshow container border style*/
+
+#carousel {
+  border: solid 2px white;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+/**/
+
+#footercont {
+height: 120px;
 }

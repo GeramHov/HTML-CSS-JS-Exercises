@@ -15,9 +15,13 @@
       href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&family=Rokkitt&display=swap"
       rel="stylesheet"
     />
+    <link rel="apple-touch-icon" sizes="180x180" href="android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <title>myExo</title>
   </head>
-  <body>
+  <body onload="autoRun()">
     <div id="headercont" class="container-fluid mb-4 bg-dark">
       <div class="row d-flex mt-4 justify-content-between">
         <div class="col col-lg-4 d-flex justify-content-end pe-5 py-3">
@@ -165,12 +169,47 @@
       </button>
     </div>
     <div
-      class="container flex-column align-items-center justify-content-center"
+      class="container flex-column text-center"
     >
-      <img id="carousel" src="im1.jpg" alt="garni" width="800" height="400" />
+    <div id="car" class="row">
+      <div class="col col-lg-2 d-flex align-items-center justify-content-end p-0">
+      <div onclick="changeImage(-1);return false;">
+        <!-- UNCOMMENT THIS SLICE OF CODE TO ENABLE -BONUS OF BONUSES IN JS-
+          <a href="#" >
+            <img src="left.png" alt="btn" width="50" height="50" id="leftbutton">
+          </a>
+         -->
+      </div>
+      </div>
+      <div class="col col-lg-8 mb-4 p-0">
+        <img id="carousel" src="im1.jpg" alt="garni" width="800" height="400" />
+      </div>
+      <div class="col col-lg-2 d-flex align-items-center justify-content-start p-0">
+        <div onclick="changeImage(1); return false;">
+          <!-- UNCOMMENT THIS SLICE OF CODE TO ENABLE -BONUS OF BONUSES IN JS-
+            <a href="#" >
+              <img src="left.png" alt="btn" width="50" height="50" id="rightbutton">
+            </a>
+          --> 
+        </div>
+      </div>
+  </div>
+  </div>
+  <footer>
+    <div id="footercont" class="container-fluid bg-dark mb-4">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <p class="text-white pt-3">
+            <img src="favicon.ico" alt="gh">
+            <i>Created By Geram Hovhannisyan</i>
+            <br>
+            © 2023
+          </p>
+        </div>
+        <div class="col"></div>
+      </div>
     </div>
-    <a href="#" onclick="changeImage(-1);return false;">previous</a>
-    <a href="#" onclick="changeImage(1); return false;">next</a>
+  </footer>
   </body>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;400&family=Rokkitt&display=swap");

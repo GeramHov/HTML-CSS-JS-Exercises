@@ -143,23 +143,60 @@ for (let zoomEx of zoomExs) {
 
 ////////////////// BONUS ///////////////////////
 
-var images = ["im2.jpg", "im3.jpg", "im4.jpg", "im5.jpg"];
+let carousel = document.getElementById("car")
+let showButton = document.getElementById("btn-photo")
 
-var imageNumber = 0;
-var imageLength = images.length - 1;
+carousel.style.visibility = 'hidden'
 
-function changeImage(x) {
-  imageNumber += x;
-  if (imageNumber > imageLength) {
-    imageNumber = 0;
-  }
-  if (imageNumber < 0) {
-    imageNumber = imageLength;
-  }
+showButton.addEventListener('click', function(){
+  carousel.style.visibility = 'visible'
+})
 
-  document.getElementById("carousel").src = images[imageNumber];
+let image = document.getElementById('carousel');
+let currentIndex = 0;
+const images = ["im1.jpg","im2.jpg", "im3.jpg", "im4.jpg", "im5.jpg"];
 
-  return false;
+image.addEventListener('click', function(event){
+if (event.clientX > image.clientWidth / 2) {
+  currentIndex = (currentIndex + 1) % images.length;
+} else {
+  currentIndex = (currentIndex - 1) + images.length % images.length;
 }
+image.src = images[currentIndex];
+})
+
+//////////// BONUS OF BONUSES //////////////////
+
+// let carousel = document.getElementById("car")
+// let showButton = document.getElementById("btn-photo")
+
+// carousel.style.visibility = 'hidden'
+
+// showButton.addEventListener('click', function(){
+//   carousel.style.visibility = 'visible'
+// })
+
+// let images = ["im1.jpg","im2.jpg", "im3.jpg", "im4.jpg", "im5.jpg"];
+
+// let imageNumber = 0;
+// let imageLength = images.length - 1;
+
+// function changeImage(x) {
+//   imageNumber += x;
+//   if (imageNumber > imageLength) {
+//     imageNumber = 0;
+//   }
+//   if (imageNumber < 0) {
+//     imageNumber = imageLength;
+//   }
+
+//   document.getElementById("carousel").src = images[imageNumber];
+
+//   return false;
+// }
+
+// function autoRun() {
+//   setInterval('changeImage(1)', 7000)
+// }
 
 ////////////////////////////////////////////////
