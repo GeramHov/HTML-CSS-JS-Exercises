@@ -29,21 +29,21 @@
 
 ///////////// EX 1.4 ///////////////
 
-let myCase = document.querySelectorAll('.ex1')
+let myCase = document.querySelectorAll(".ex1");
 
-const colors = ['red', 'green', 'blue', 'yellow', 'orange'];
+const colors = ["red", "green", "blue", "yellow", "orange"];
 let colorIndex = 0;
 
 for (let aCase of myCase) {
-aCase.addEventListener('click', function(event) {
-  aCase.style.backgroundColor = colors[colorIndex];
-  colorIndex = (colorIndex + 1) % colors.length;
-  event.stopPropagation()
-  document.addEventListener('click', function(){
-    aCase.style.backgroundColor = 'bisque'
-  })
-})};
-
+  aCase.addEventListener("click", function (event) {
+    aCase.style.backgroundColor = colors[colorIndex];
+    colorIndex = (colorIndex + 1) % colors.length;
+    event.stopPropagation();
+    document.addEventListener("click", function () {
+      aCase.style.backgroundColor = "bisque";
+    });
+  });
+}
 
 //////////////////////////////////
 
@@ -67,111 +67,99 @@ aCase.addEventListener('click', function(event) {
 
 ///////////// EX 2.3 /////////////
 
-let textCase = document.querySelector('.newcase')
+let textCase = document.querySelector(".newcase");
 
-textCase.style.visibility = 'hidden'
+textCase.style.visibility = "hidden";
 
 //////////////////////////////////
 
 ///////////// EX 2.5 2.6 /////////////
 
-let textBtn = document.getElementById('btn')
+let textBtn = document.getElementById("btn");
 
-let page = document.querySelector('body')
+let page = document.querySelector("body");
 
-textBtn.addEventListener('click', function(event){
-    textCase.style.visibility = 'visible';
-    page.style.backgroundColor = 'grey'
-    event.stopPropagation()
-})
+textBtn.addEventListener("click", function (event) {
+  textCase.style.visibility = "visible";
+  page.style.backgroundColor = "grey";
+  event.stopPropagation();
+});
 
-document.addEventListener('click', function(event){
-  if (!event.target.matches('#paragraph')){
-  textCase.style.visibility = 'hidden'
-  page.style.backgroundColor = 'white'
-}
-})
+document.addEventListener("click", function (event) {
+  if (!event.target.matches("#paragraph")) {
+    textCase.style.visibility = "hidden";
+    page.style.backgroundColor = "white";
+  }
+});
 //////////////////////////////////
 
 ///////////// Combinaison gagnante /////////////
 
-let consigne = document.getElementById('consigne')
+let consigne = document.getElementById("consigne");
 
-consigne.style.filter = 'blur(50px)'
+consigne.style.filter = "blur(50px)";
 
-consigne.addEventListener('mouseenter', function(){
-consigne.style.filter = 'blur(0)'
+consigne.addEventListener("mouseenter", function () {
+  consigne.style.filter = "blur(0)";
 });
 
-consigne.addEventListener('mouseleave', function(){
-  consigne.style.filter = 'blur(50px)'
-  })
+consigne.addEventListener("mouseleave", function () {
+  consigne.style.filter = "blur(50px)";
+});
 
-let hiddenString = document.getElementById('hiddenstring')
+let hiddenString = document.getElementById("hiddenstring");
 
-hiddenString.style.visibility = 'hidden'
+hiddenString.style.visibility = "hidden";
 
-document.addEventListener('keydown', function(event){
-  if (event.key === ('e','r')) {
-hiddenString.style.visibility = 'visible'
+document.addEventListener("keydown", function (event) {
+  if (event.key === ("e", "r")) {
+    hiddenString.style.visibility = "visible";
   }
-})
+});
 
-document.addEventListener('keyup', function(event){
-  if (event.key === ('e','r')) {
-hiddenString.style.visibility = 'hidden'
-  } 
-})
+document.addEventListener("keyup", function (event) {
+  if (event.key === ("e", "r")) {
+    hiddenString.style.visibility = "hidden";
+  }
+});
 
 ////////////////////////////////////////////////
 
 ////////////////// EXERCISE 3 //////////////////
 
-let zoomExs = document.querySelectorAll('#cas')
+let zoomExs = document.querySelectorAll("#cas");
 
 for (let zoomEx of zoomExs) {
-    zoomEx.addEventListener('mousedown', function(){
-    zoomEx.style.width = '400px'
-    })
-    
-    zoomEx.addEventListener('mouseup', function(){
-    zoomEx.style.width = '200px'
-    })
+  zoomEx.addEventListener("mousedown", function () {
+    zoomEx.style.width = "400px";
+  });
+
+  zoomEx.addEventListener("mouseup", function () {
+    zoomEx.style.width = "200px";
+  });
 }
 
 ////////////////////////////////////////////////
 
 ////////////////// BONUS ///////////////////////
 
-let pic = document.querySelector('.masis')
-let button = document.querySelector('#btn-photo')
-let rightclick = document.querySelector('.rightclick')
+var images = ["im2.jpg", "im3.jpg", "im4.jpg", "im5.jpg"];
 
-pic.style.visibility = 'hidden'
+var imageNumber = 0;
+var imageLength = images.length - 1;
 
-button.addEventListener('click', function(){
-  pic.style.visibility = 'visible'
-})
+function changeImage(x) {
+  imageNumber += x;
+  if (imageNumber > imageLength) {
+    imageNumber = 0;
+  }
+  if (imageNumber < 0) {
+    imageNumber = imageLength;
+  }
 
+  document.getElementById("carousel").src = images[imageNumber];
 
-
-
-
-
+  return false;
+}
 
 ////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
